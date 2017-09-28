@@ -8,8 +8,9 @@ onready var Resxargxi_sono = get_node("Resxargxi_sono")
 onready var Pafi_malplene_sono = get_node("Pafi_malplene_sono")
 onready var Nav_tempilo = get_node("Nav_tempilo")
 onready var Pafi_tempilo = get_node("Pafi_tempilo")
+onready var Vivo = get_node("Vivo")
 
-const RAPIDO = 150
+const RAPIDO = 180
 var nav = null
 var vojo = []
 var celo = Vector2()
@@ -20,6 +21,9 @@ var kuglujoj = 99
 var kugloj = 7
 
 var pafebla = false
+
+const VIVO = 7.0
+var vivo = 7.0
 
 func _ready():
 	celo = get_node("/root/Radiko/Soldato").get_global_pos()
@@ -36,7 +40,7 @@ func rekalkuli_vojon():
 func _process(delta):
 	if vojo.size() > 1:
 		var d = get_pos().distance_to(vojo[0])
-		if d > 350:
+		if d > 2:
 			move_to(get_pos().linear_interpolate(vojo[0], (RAPIDO * delta)/d))
 			if not animeto:
 				Aspekto.set_animation("movi")
@@ -52,7 +56,6 @@ func _on_Nav_tempilo_timeout():
 	rekalkuli_vojon()
 
 func pafi():
-	print(1)
 	if kugloj > 0:
 		animeto = true
 		Aspekto.set_animation("pafi")
@@ -67,16 +70,20 @@ func pafi():
 
 func resxargxi():
 	if kuglujoj > 0:
-		animeto = true
+		pafebla = false
 		Aspekto.set_animation("resxargxi")
-		kuglujoj -= 1
-		kugloj = 7
+		animeto = true
 		Resxargxi_sono.play()
 
 func _on_Aspekto_finished():
 	var a = Aspekto.get_animation()
-	if a == "pafi" or a == "resxargxi":
+	if a == "pafi":
 		animeto = false
+	elif a == "resxargxi":
+		pafebla = true
+		animeto = false
+		kuglujoj -= 1
+		kugloj = 7
 
 func _on_Videjo_body_enter( korpo ):
 	Nav_tempilo.start()

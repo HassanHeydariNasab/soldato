@@ -9,6 +9,7 @@ onready var Pafi_malplene_sono = get_node("Pafi_malplene_sono")
 onready var Kuglujo = get_node("/root/Radiko/Kanvaso/Kuglujo")
 onready var Kuglujoj = get_node("/root/Radiko/Kanvaso/Kuglujoj")
 onready var Kamero = get_node("/root/Radiko/Kamero")
+onready var Vivo = get_node("Vivo")
 
 var animeto = false
 
@@ -16,6 +17,11 @@ var kuglujoj = 10
 var kugloj = 7
 
 var pafebla = true
+
+var Malamikoj = []
+
+const VIVO = 20.0
+var vivo = 20.0
 
 func _ready():
 	Kamero.set_offset(get_global_pos())
@@ -52,17 +58,20 @@ func pafi():
 		Kuglo_.angulo = get_rot()-PI/2.0
 		T.Radiko.Kugloj.add_child(Kuglo_)
 		Pafi_sono.play()
+		print(Malamikoj)
+		for Malamiko in Malamikoj:
+			Malamiko.Nav_tempilo.start()
+			Malamiko.set_process(true)
+			Malamiko.pafebla = true
+			Malamiko.Pafi_tempilo.start()
 	else:
 		Pafi_malplene_sono.play()
 
 func resxargxi():
 	if kuglujoj > 0:
+		pafebla = false
 		animeto = true
 		Aspekto.set_animation("resxargxi")
-		kuglujoj -= 1
-		kugloj = 7
-		Kuglujo.set_value(7)
-		Kuglujoj.set_text(str(kuglujoj))
 		Resxargxi_sono.play()
 
 func _input(evento):
@@ -89,5 +98,18 @@ func _input(evento):
 
 func _on_Aspekto_finished():
 	var a = Aspekto.get_animation()
-	if a == "pafi" or a == "resxargxi":
+	if a == "pafi":
 		animeto = false
+	elif a == "resxargxi":
+		pafebla = true
+		animeto = false
+		kuglujoj -= 1
+		kugloj = 7
+		Kuglujo.set_value(7)
+		Kuglujoj.set_text(str(kuglujoj))
+
+func _on_SonoAero_body_enter( korpo ):
+	Malamikoj.append(korpo)
+
+func _on_SonoAero_body_exit( korpo ):
+	Malamikoj.erase(korpo)

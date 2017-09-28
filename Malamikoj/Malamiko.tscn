@@ -95,7 +95,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 90, 250 )
+extents = Vector2( 90, 880 )
 
 [node name="Malamiko" type="KinematicBody2D"]
 
@@ -128,9 +128,10 @@ transform/pos = Vector2( -50, 150 )
 
 [node name="Videjo" type="Area2D" parent="."]
 
+editor/display_folded = true
 input/pickable = true
 shapes/0/shape = SubResource( 4 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -20, 330 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -20, 970 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -141,7 +142,7 @@ collision/mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Videjo"]
 
-transform/pos = Vector2( -20, 330 )
+transform/pos = Vector2( -20, 970 )
 shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
@@ -189,9 +190,23 @@ autostart = false
 [node name="Pafi_tempilo" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.5
 one_shot = false
 autostart = false
+
+[node name="Vivo" type="Polygon2D" parent="."]
+
+polygon = Vector2Array( -80, -130, 80, -130, 80, -120, -80, -120 )
+uv = Vector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
 
 [connection signal="finished" from="Aspekto" to="." method="_on_Aspekto_finished"]
 
