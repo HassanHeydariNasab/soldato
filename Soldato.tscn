@@ -109,7 +109,7 @@ transform/pos = Vector2( 2, 0 )
 transform/rot = -90.0
 frames = SubResource( 2 )
 animation = "senkulpa"
-frame = 4
+frame = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -118,9 +118,9 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Kuglo_elirejo" type="Node2D" parent="."]
+[node name="Kuglo_elirejo" type="Position2D" parent="."]
 
-transform/pos = Vector2( -49.1095, 151.012 )
+transform/pos = Vector2( -50, 150 )
 
 [node name="Pafi_sono" type="StreamPlayer" parent="."]
 

@@ -3,8 +3,8 @@
 [ext_resource path="res://Radiko.gd" type="Script" id=1]
 [ext_resource path="res://Tegolaroj/Plankoj.tres" type="TileSet" id=2]
 [ext_resource path="res://Tegolaroj/Blokiloj.tres" type="TileSet" id=3]
-[ext_resource path="res://Malamikoj/Malamiko.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Soldato.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Soldato.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Malamikoj/Malamiko.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Butonoj/movo.png" type="Texture" id=6]
 [ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=7]
 [ext_resource path="res://Butonoj/rekomenci.png" type="Texture" id=8]
@@ -80,32 +80,31 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Soldato" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 400, 600 )
+
 [node name="Malamikoj" type="Node2D" parent="."]
 
-[node name="Malamiko" parent="Malamikoj" instance=ExtResource( 4 )]
+[node name="Malamiko" parent="Malamikoj" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( -1280, -384 )
+transform/pos = Vector2( 384, -128 )
 
-[node name="Malamiko1" parent="Malamikoj" instance=ExtResource( 4 )]
+[node name="Malamiko1" parent="Malamikoj" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -1024, -512 )
 
-[node name="Malamiko2" parent="Malamikoj" instance=ExtResource( 4 )]
+[node name="Malamiko2" parent="Malamikoj" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2048, -768 )
 
-[node name="Malamiko3" parent="Malamikoj" instance=ExtResource( 4 )]
+[node name="Malamiko3" parent="Malamikoj" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -384, -2176 )
 
-[node name="Malamiko4" parent="Malamikoj" instance=ExtResource( 4 )]
+[node name="Malamiko4" parent="Malamikoj" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( -2560, -1536 )
-
-[node name="Soldato" parent="." instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 400, 600 )
-transform/scale = Vector2( 0.7, 0.7 )
 
 [node name="Kugloj" type="Node2D" parent="."]
 
