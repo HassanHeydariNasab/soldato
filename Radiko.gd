@@ -2,6 +2,7 @@ extends Node2D
 
 onready var Soldato = get_node("Soldato")
 onready var Kugloj = get_node("Kugloj")
+onready var Kamero = get_node("Kamero")
 
 func _ready():
 	T.Radiko = self

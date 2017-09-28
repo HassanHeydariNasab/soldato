@@ -8,15 +8,17 @@ onready var Resxargxi_sono = get_node("Resxargxi_sono")
 onready var Pafi_malplene_sono = get_node("Pafi_malplene_sono")
 onready var Kuglujo = get_node("/root/Radiko/Kanvaso/Kuglujo")
 onready var Kuglujoj = get_node("/root/Radiko/Kanvaso/Kuglujoj")
+onready var Kamero = get_node("/root/Radiko/Kamero")
 
 var animeto = false
 
-var kuglujoj = 100
+var kuglujoj = 10
 var kugloj = 7
 
 var pafebla = true
 
 func _ready():
+	Kamero.set_offset(get_global_pos())
 	Aspekto.play("senkulpa")
 	set_process(true)
 	set_process_input(true)
@@ -24,6 +26,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("supre") or Input.is_action_pressed("malsupre") or\
 	Input.is_action_pressed("dekstre") or Input.is_action_pressed("maldekstre"):
+		Kamero.set_offset(get_global_pos())
 		if not animeto:
 			Aspekto.set_animation("movi")
 	else:
@@ -67,16 +70,16 @@ func _input(evento):
 		resxargxi()
 	elif T.os == "Android":
 		if evento.type == InputEvent.SCREEN_TOUCH:
-			if evento.is_pressed() and (evento.pos.x > 320) and evento.index != 2:
-				look_at(evento.pos)
+			if evento.is_pressed() and evento.index != 2 and\
+			evento.pos.y < 900:
+				look_at(evento.pos+get_global_pos()-Vector2(300,600))
 				pafi()
 		elif evento.type == InputEvent.SCREEN_DRAG:
-			if evento.pos.x > 320:
-				look_at(evento.pos)
+			if evento.pos.y < 900:
+				look_at(evento.pos+get_global_pos()-Vector2(300,600))
 	else:
 		if evento.type == InputEvent.MOUSE_BUTTON:
-			if evento.button_index == BUTTON_LEFT and evento.is_pressed() and\
-			(evento.pos.x > 320):
+			if evento.button_index == BUTTON_LEFT and evento.is_pressed():
 				pafi()
 			elif evento.button_index == BUTTON_RIGHT and evento.is_pressed() and\
 			kuglujoj > 0:
