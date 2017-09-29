@@ -86,7 +86,33 @@ __meta__ = {
 
 transform/pos = Vector2( 400, 600 )
 
+[node name="Kuglo_flanko" type="Polygon2D" parent="."]
+
+visibility/visible = false
+visibility/opacity = 0.5
+transform/pos = Vector2( 768, 640 )
+polygon = Vector2Array( 0, -240, 20, -220, 80, -180, 30, -200, -30, -200, -80, -180, -20, -220 )
+uv = Vector2Array(  )
+color = Color( 1, 0.0901961, 0.266667, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="Kuglo_flanko_tempilo" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = false
+autostart = false
+
 [node name="Malamikoj" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="Malamiko" parent="Malamikoj" instance=ExtResource( 5 )]
 
@@ -333,6 +359,8 @@ toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+
+[connection signal="timeout" from="Kuglo_flanko_tempilo" to="." method="_on_Kuglo_flanko_tempilo_timeout"]
 
 [connection signal="pressed" from="Kanvaso/Kontroliloj/Dekstre_Supre" to="." method="_on_Dekstre_Supre_pressed"]
 

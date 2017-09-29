@@ -3,6 +3,8 @@ extends Node2D
 onready var Soldato = get_node("Soldato")
 onready var Kugloj = get_node("Kugloj")
 onready var Kamero = get_node("Kamero")
+onready var Kuglo_flanko = get_node("Kuglo_flanko")
+onready var Kuglo_flanko_tempilo = get_node("Kuglo_flanko_tempilo")
 
 func _ready():
 	T.Radiko = self
@@ -44,3 +46,6 @@ func _on_Malaktivigi_toggled( b ):
 
 func _on_Resxargxi_pressed():
 	Soldato.resxargxi()
+
+func _on_Kuglo_flanko_tempilo_timeout():
+	Kuglo_flanko.hide()
