@@ -60,12 +60,6 @@ func pafi():
 		Kuglo_.angulo = get_rot()-PI/2.0
 		T.Radiko.Kugloj.add_child(Kuglo_)
 		Pafi_sono.play()
-		print(Malamikoj)
-		for Malamiko in Malamikoj:
-			Malamiko.Nav_tempilo.start()
-			Malamiko.set_process(true)
-			Malamiko.pafebla = true
-			Malamiko.Pafi_tempilo.start()
 	else:
 		Pafi_malplene_sono.play()
 
@@ -110,8 +104,8 @@ func _on_Aspekto_finished():
 		Kuglujo.set_value(7)
 		Kuglujoj.set_text(str(kuglujoj))
 
-func _on_SonoAero_body_enter( korpo ):
-	Malamikoj.append(korpo)
-
-func _on_SonoAero_body_exit( korpo ):
-	Malamikoj.erase(korpo)
+func _je_zombio_atakis():
+	vivo -= 2
+	if vivo <= 0:
+		get_tree().reload_current_scene()
+	Vivo.set_scale(Vector2(vivo/VIVO,1))

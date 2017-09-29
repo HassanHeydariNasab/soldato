@@ -18,6 +18,9 @@ func _on_Areo_body_enter( korpo ):
 			T.Radiko.Kuglo_flanko.show()
 			T.Radiko.Kuglo_flanko.set_rot(angulo+PI/2)
 			T.Radiko.Kuglo_flanko_tempilo.start()
+		elif T.get_layer_bit(korpo,2):
+			korpo.Nav_tempilo.start()
+			korpo.set_process(true)
 		if korpo.vivo <= 0:
 			if T.get_layer_bit(korpo,1):
 				get_tree().reload_current_scene()

@@ -1,0 +1,182 @@
+[gd_scene load_steps=49 format=1]
+
+[ext_resource path="res://Malamikoj/Zombio.gd" type="Script" id=1]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_0.png" type="Texture" id=2]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_1.png" type="Texture" id=3]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_2.png" type="Texture" id=4]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_3.png" type="Texture" id=5]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_4.png" type="Texture" id=6]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_5.png" type="Texture" id=7]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_6.png" type="Texture" id=8]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_7.png" type="Texture" id=9]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_8.png" type="Texture" id=10]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_9.png" type="Texture" id=11]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_10.png" type="Texture" id=12]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_11.png" type="Texture" id=13]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_12.png" type="Texture" id=14]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_13.png" type="Texture" id=15]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_14.png" type="Texture" id=16]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_15.png" type="Texture" id=17]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_16.png" type="Texture" id=18]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_0.png" type="Texture" id=19]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_1.png" type="Texture" id=20]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_2.png" type="Texture" id=21]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_3.png" type="Texture" id=22]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_4.png" type="Texture" id=23]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_5.png" type="Texture" id=24]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_6.png" type="Texture" id=25]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_7.png" type="Texture" id=26]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_8.png" type="Texture" id=27]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_9.png" type="Texture" id=28]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_10.png" type="Texture" id=29]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_11.png" type="Texture" id=30]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_12.png" type="Texture" id=31]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_13.png" type="Texture" id=32]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_14.png" type="Texture" id=33]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_15.png" type="Texture" id=34]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_16.png" type="Texture" id=35]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_0.png" type="Texture" id=36]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_1.png" type="Texture" id=37]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_2.png" type="Texture" id=38]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_3.png" type="Texture" id=39]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_4.png" type="Texture" id=40]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_5.png" type="Texture" id=41]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_6.png" type="Texture" id=42]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_7.png" type="Texture" id=43]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-attack_8.png" type="Texture" id=44]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 90.1464
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "movi",
+"speed": 21.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "senkulpa",
+"speed": 21.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "ataki",
+"speed": 21.0
+} ]
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 5, -5, 20, 5, -20, 5, -5, -5 )
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 155.688
+
+[node name="Zombio" type="KinematicBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -5.01056, -6.61746 )
+shapes/0/trigger = false
+collision/layers = 4
+collision/mask = 2055
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="Aspekto" type="AnimatedSprite" parent="."]
+
+transform/rot = -90.0
+frames = SubResource( 2 )
+animation = "senkulpa"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -5.01056, -6.61746 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Nav_tempilo" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = false
+
+[node name="Vivo" type="Polygon2D" parent="."]
+
+polygon = Vector2Array( -80, -130, 80, -130, 80, -120, -80, -120 )
+uv = Vector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="Videjo" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 48.1299, 0, 0, 86.5346, 0, 380 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 0
+collision/mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Videjo"]
+
+transform/pos = Vector2( 0, 380 )
+transform/scale = Vector2( 48.1299, 86.5346 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Atakejo" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 47 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 0
+collision/mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Atakejo"]
+
+transform/pos = Vector2( 0, 47 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="finished" from="Aspekto" to="." method="_on_Aspekto_finished"]
+
+[connection signal="timeout" from="Nav_tempilo" to="." method="_on_Nav_tempilo_timeout"]
+
+[connection signal="body_enter" from="Videjo" to="." method="_on_Videjo_body_enter"]
+
+[connection signal="body_exit" from="Videjo" to="." method="_on_Videjo_body_exit"]
+
+[connection signal="body_enter" from="Atakejo" to="." method="_on_Atakejo_body_enter"]
+
+[connection signal="body_exit" from="Atakejo" to="." method="_on_Atakejo_body_exit"]
+
+

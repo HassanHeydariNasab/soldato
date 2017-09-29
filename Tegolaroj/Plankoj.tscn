@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Tegolaroj/tegolo1.png" type="Texture" id=1]
+[ext_resource path="res://Tegolaroj/road1.jpg" type="Texture" id=1]
+[ext_resource path="res://Tegolaroj/road2.jpg" type="Texture" id=2]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -12,10 +13,21 @@ outlines = [ Vector2Array( 16, -16, -16, -16, -16, 16, 16, 16 ) ]
 
 [node name="Tegolo1" type="Sprite" parent="."]
 
-transform/scale = Vector2( 8, 8 )
 texture = ExtResource( 1 )
+region_rect = Rect2( 32, 32, 32, 32 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Tegolo1"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="Tegolo2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 44, 0 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 32, 32, 32, 32 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Tegolo2"]
 
 navpoly = SubResource( 1 )
 enabled = true
