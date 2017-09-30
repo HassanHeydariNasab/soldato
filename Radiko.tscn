@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://Radiko.gd" type="Script" id=1]
 [ext_resource path="res://Tegolaroj/Plankoj.tres" type="TileSet" id=2]
-[ext_resource path="res://Tegolaroj/Blokiloj.tres" type="TileSet" id=3]
-[ext_resource path="res://Soldato.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Malamikoj/Zombio.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Butonoj/movo.png" type="Texture" id=6]
-[ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=7]
-[ext_resource path="res://Butonoj/rekomenci.png" type="Texture" id=8]
+[ext_resource path="res://Elementoj/Kuglujo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tegolaroj/Blokiloj.tres" type="TileSet" id=4]
+[ext_resource path="res://Soldato.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Malamikoj/Zombio.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Butonoj/movilo.png" type="Texture" id=7]
+[ext_resource path="res://Butonoj/movo.png" type="Texture" id=8]
+[ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=9]
+[ext_resource path="res://Butonoj/rekomenci.png" type="Texture" id=10]
 
 [node name="Radiko" type="Node2D"]
 
@@ -61,10 +63,26 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Elementoj" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="Kuglujo" parent="Elementoj" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 370, 1150 )
+
+[node name="Kuglujo1" parent="Elementoj" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 240, 730 )
+
+[node name="Kuglujo2" parent="Elementoj" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 350, -220 )
+
 [node name="Blokiloj" type="TileMap" parent="."]
 
 mode = 0
-tile_set = ExtResource( 3 )
+tile_set = ExtResource( 4 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -82,7 +100,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Soldato" parent="." instance=ExtResource( 4 )]
+[node name="Soldato" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 343.28, 1552.93 )
 transform/rot = 180.0
@@ -115,16 +133,16 @@ autostart = false
 
 editor/display_folded = true
 
-[node name="Zombio" parent="Malamikoj" instance=ExtResource( 5 )]
+[node name="Zombio" parent="Malamikoj" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 336.259, 215.55 )
 
-[node name="Zombio1" parent="Malamikoj" instance=ExtResource( 5 )]
+[node name="Zombio1" parent="Malamikoj" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2131.63, -525.828 )
 transform/rot = -37.3415
 
-[node name="Zombio2" parent="Malamikoj" instance=ExtResource( 5 )]
+[node name="Zombio2" parent="Malamikoj" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( -716.854, -450.389 )
 transform/rot = -196.613
@@ -141,6 +159,7 @@ scale = Vector2( 1, 1 )
 
 [node name="Fono" type="Polygon2D" parent="Kanvaso"]
 
+visibility/opacity = 0.7
 polygon = Vector2Array( -1450, 900, 3750, 900, 3750, 1200, -1450, 1200 )
 uv = Vector2Array(  )
 color = Color( 0.292969, 0.277331, 0.255203, 1 )
@@ -158,6 +177,7 @@ __meta__ = {
 
 [node name="Kontroliloj" type="Control" parent="Kanvaso"]
 
+editor/display_folded = true
 visibility/opacity = 0.4
 anchor/top = 1
 anchor/bottom = 1
@@ -170,10 +190,17 @@ margin/top = 617.0
 margin/right = -94.0
 margin/bottom = 577.0
 
+[node name="Aspekto" type="Sprite" parent="Kanvaso/Kontroliloj"]
+
+transform/pos = Vector2( 284, 467 )
+transform/scale = Vector2( 2.34375, 2.34375 )
+texture = ExtResource( 7 )
+
 [node name="Dekstre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 334, 417 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -185,8 +212,9 @@ visibility_mode = 0
 
 [node name="Maldekstre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 134, 417 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -198,8 +226,9 @@ visibility_mode = 0
 
 [node name="Supre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 234, 317 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -211,8 +240,9 @@ visibility_mode = 0
 
 [node name="Malsupre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 234, 517 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -224,8 +254,9 @@ visibility_mode = 0
 
 [node name="Dekstre_Supre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 334, 317 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -237,8 +268,9 @@ visibility_mode = 0
 
 [node name="Dekstre_Malsupre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 334, 517 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -250,8 +282,9 @@ visibility_mode = 0
 
 [node name="Maldekstre_Supre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 134, 317 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -263,8 +296,9 @@ visibility_mode = 0
 
 [node name="Maldekstre_Malsupre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
+visibility/opacity = 0.0
 transform/pos = Vector2( 134, 517 )
-normal = ExtResource( 6 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -280,14 +314,15 @@ anchor/left = 1
 anchor/top = 1
 anchor/right = 1
 anchor/bottom = 1
+rect/rotation = 90.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 300.0
-margin/top = 300.0
-margin/right = 100.0
-margin/bottom = 200.0
+margin/left = 70.0
+margin/top = 0.0
+margin/right = -230.0
+margin/bottom = -70.0
 range/min = 0.0
 range/max = 7.0
 range/step = 1.0
@@ -299,19 +334,20 @@ percent/visible = false
 
 [node name="Kuglujoj" type="Label" parent="Kanvaso"]
 
-anchor/left = 1
+anchor/left = 3
 anchor/top = 1
-anchor/right = 1
+anchor/right = 3
 anchor/bottom = 1
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 300.0
-margin/top = 200.0
-margin/right = 150.0
-margin/bottom = 100.0
-custom_fonts/font = ExtResource( 7 )
+margin/left = 10.0
+margin/top = 80.0
+margin/right = -130.0
+margin/bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "10"
 align = 1
 valign = 1
@@ -319,22 +355,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Resxargxi" type="TouchScreenButton" parent="Kanvaso/Kuglujoj"]
-
-transform/pos = Vector2( 150, 0 )
-transform/scale = Vector2( 1.17188, 1.17188 )
-normal = ExtResource( 8 )
-pressed = ExtResource( 8 )
-bitmask = null
-shape = null
-shape_centered = true
-shape_visible = true
-passby_press = true
-action = "resxargxi"
-visibility_mode = 0
-
 [node name="Malaktivigi" type="Button" parent="Kanvaso"]
 
+visibility/visible = false
 anchor/left = 1
 anchor/top = 1
 anchor/right = 1
@@ -343,15 +366,45 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 100.0
+margin/left = 140.0
 margin/top = 300.0
-margin/right = 0.0
-margin/bottom = 200.0
-custom_fonts/font = ExtResource( 7 )
+margin/right = 70.0
+margin/bottom = 0.0
+custom_fonts/font = ExtResource( 9 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+
+[node name="Resxargxejo" type="Control" parent="Kanvaso"]
+
+editor/display_folded = true
+anchor/left = 3
+anchor/top = 1
+anchor/right = 3
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 300.0
+margin/top = 1200.0
+margin/right = 260.0
+margin/bottom = 1160.0
+
+[node name="Resxargxi" type="TouchScreenButton" parent="Kanvaso/Resxargxejo"]
+
+transform/pos = Vector2( 300, 990 )
+transform/scale = Vector2( 1.01563, 1.01563 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 10 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = true
+action = "resxargxi"
+visibility_mode = 0
 
 [connection signal="timeout" from="Kuglo_flanko_tempilo" to="." method="_on_Kuglo_flanko_tempilo_timeout"]
 
@@ -371,8 +424,8 @@ flat = false
 
 [connection signal="released" from="Kanvaso/Kontroliloj/Maldekstre_Malsupre" to="." method="_on_Maldekstre_Malsupre_released"]
 
-[connection signal="pressed" from="Kanvaso/Kuglujoj/Resxargxi" to="." method="_on_Resxargxi_pressed"]
-
 [connection signal="toggled" from="Kanvaso/Malaktivigi" to="." method="_on_Malaktivigi_toggled"]
+
+[connection signal="pressed" from="Kanvaso/Resxargxejo/Resxargxi" to="." method="_on_Resxargxi_pressed"]
 
 

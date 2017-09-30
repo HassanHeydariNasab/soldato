@@ -24,6 +24,8 @@ var Malamikoj = []
 const VIVO = 20.0
 var vivo = 20.0
 
+var angulo = 0
+
 func _ready():
 	Kamero.set_offset(get_global_pos())
 	Aspekto.play("senkulpa")
