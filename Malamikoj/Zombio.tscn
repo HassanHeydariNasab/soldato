@@ -1,40 +1,40 @@
 [gd_scene load_steps=49 format=1]
 
 [ext_resource path="res://Malamikoj/Zombio.gd" type="Script" id=1]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_0.png" type="Texture" id=2]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_1.png" type="Texture" id=3]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_2.png" type="Texture" id=4]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_3.png" type="Texture" id=5]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_4.png" type="Texture" id=6]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_5.png" type="Texture" id=7]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_6.png" type="Texture" id=8]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_7.png" type="Texture" id=9]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_8.png" type="Texture" id=10]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_9.png" type="Texture" id=11]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_10.png" type="Texture" id=12]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_11.png" type="Texture" id=13]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_12.png" type="Texture" id=14]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_13.png" type="Texture" id=15]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_14.png" type="Texture" id=16]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_15.png" type="Texture" id=17]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-move_16.png" type="Texture" id=18]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_0.png" type="Texture" id=19]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_1.png" type="Texture" id=20]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_2.png" type="Texture" id=21]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_3.png" type="Texture" id=22]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_4.png" type="Texture" id=23]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_5.png" type="Texture" id=24]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_6.png" type="Texture" id=25]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_7.png" type="Texture" id=26]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_8.png" type="Texture" id=27]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_9.png" type="Texture" id=28]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_10.png" type="Texture" id=29]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_11.png" type="Texture" id=30]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_12.png" type="Texture" id=31]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_13.png" type="Texture" id=32]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_14.png" type="Texture" id=33]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_15.png" type="Texture" id=34]
-[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_16.png" type="Texture" id=35]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_0.png" type="Texture" id=2]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_1.png" type="Texture" id=3]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_2.png" type="Texture" id=4]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_3.png" type="Texture" id=5]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_4.png" type="Texture" id=6]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_5.png" type="Texture" id=7]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_6.png" type="Texture" id=8]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_7.png" type="Texture" id=9]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_8.png" type="Texture" id=10]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_9.png" type="Texture" id=11]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_10.png" type="Texture" id=12]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_11.png" type="Texture" id=13]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_12.png" type="Texture" id=14]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_13.png" type="Texture" id=15]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_14.png" type="Texture" id=16]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_15.png" type="Texture" id=17]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-idle_16.png" type="Texture" id=18]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_0.png" type="Texture" id=19]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_1.png" type="Texture" id=20]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_2.png" type="Texture" id=21]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_3.png" type="Texture" id=22]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_4.png" type="Texture" id=23]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_5.png" type="Texture" id=24]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_6.png" type="Texture" id=25]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_7.png" type="Texture" id=26]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_8.png" type="Texture" id=27]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_9.png" type="Texture" id=28]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_10.png" type="Texture" id=29]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_11.png" type="Texture" id=30]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_12.png" type="Texture" id=31]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_13.png" type="Texture" id=32]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_14.png" type="Texture" id=33]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_15.png" type="Texture" id=34]
+[ext_resource path="res://Malamikoj/Zombio/skeleton-move_16.png" type="Texture" id=35]
 [ext_resource path="res://Malamikoj/Zombio/skeleton-attack_0.png" type="Texture" id=36]
 [ext_resource path="res://Malamikoj/Zombio/skeleton-attack_1.png" type="Texture" id=37]
 [ext_resource path="res://Malamikoj/Zombio/skeleton-attack_2.png" type="Texture" id=38]
@@ -55,12 +55,12 @@ radius = 90.1464
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "movi",
+"name": "senkulpa",
 "speed": 21.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": true,
-"name": "senkulpa",
+"name": "movi",
 "speed": 21.0
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
@@ -86,7 +86,7 @@ shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -5.01056, -6.61746 )
 shapes/0/trigger = false
 collision/layers = 4
-collision/mask = 2055
+collision/mask = 2054
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 
@@ -95,7 +95,7 @@ script/script = ExtResource( 1 )
 transform/rot = -90.0
 frames = SubResource( 2 )
 animation = "senkulpa"
-frame = 3
+frame = 13
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

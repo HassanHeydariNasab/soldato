@@ -84,7 +84,8 @@ __meta__ = {
 
 [node name="Soldato" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 256, 1792 )
+transform/pos = Vector2( 343.28, 1552.93 )
+transform/rot = 180.0
 
 [node name="Kuglo_flanko" type="Polygon2D" parent="."]
 
@@ -111,6 +112,8 @@ one_shot = false
 autostart = false
 
 [node name="Malamikoj" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="Zombio" parent="Malamikoj" instance=ExtResource( 5 )]
 

@@ -19,12 +19,9 @@ func _ready():
 	nav = get_node("/root/Radiko/Nav")
 	Aspekto.play("senkulpa")
 	set_fixed_process(true)
-	pass
 
 func rekalkuli_vojon():
 	vojo = nav.get_simple_path(get_pos(), celo, false)
-	if vojo.size() == 0:
-		pass
 
 func _process(delta):
 	if vojo.size() > 1:
@@ -49,7 +46,6 @@ func _on_Aspekto_finished():
 	if a == "ataki":
 		T.Radiko.Soldato._je_zombio_atakis()
 
-
 func _on_Videjo_body_enter( korpo ):
 	Nav_tempilo.start()
 	set_process(true)
@@ -67,4 +63,3 @@ func _on_Atakejo_body_enter( korpo ):
 func _on_Atakejo_body_exit( korpo ):
 	if T.get_layer_bit(korpo, 1):
 		animeto = false
-		Aspekto.set_animation("movi")
