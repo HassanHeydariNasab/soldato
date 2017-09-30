@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://Tegolaroj/arbo1.png" type="Texture" id=1]
 [ext_resource path="res://Tegolaroj/arbo2.png" type="Texture" id=2]
 [ext_resource path="res://Tegolaroj/arbo3.png" type="Texture" id=3]
+[ext_resource path="res://Tegolaroj/Arboj/arbo_01.png" type="Texture" id=4]
+[ext_resource path="res://Tegolaroj/Arboj/arbo_40.png" type="Texture" id=5]
+[ext_resource path="res://Tegolaroj/Arboj/arbo_04.png" type="Texture" id=6]
+[ext_resource path="res://Tegolaroj/Arboj/arbo_03.png" type="Texture" id=7]
+[ext_resource path="res://Tegolaroj/Arboj/arbo_14.png" type="Texture" id=8]
+[ext_resource path="res://Tegolaroj/Arboj/arbo_19.png" type="Texture" id=9]
 
 [node name="Arboj" type="Node2D"]
 
@@ -25,5 +31,41 @@ texture = ExtResource( 2 )
 transform/pos = Vector2( 0, 1152 )
 transform/scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
+
+[node name="Arbo4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 2180 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 4 )
+
+[node name="Arbo5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0, 2710 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 5 )
+
+[node name="Arbo6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 630, 2180 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 6 )
+
+[node name="Arbo7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640, 2680 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 7 )
+
+[node name="Arbo8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1190, 2690 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 8 )
+
+[node name="Arbo9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1190, 2210 )
+transform/scale = Vector2( 5, 5 )
+texture = ExtResource( 9 )
 
 

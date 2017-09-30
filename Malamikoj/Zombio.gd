@@ -58,6 +58,7 @@ func _on_Videjo_body_exit( korpo ):
 func _on_Atakejo_body_enter( korpo ):
 	if T.get_layer_bit(korpo, 1):
 		animeto = true
+		look_at(celo)
 		Aspekto.set_animation("ataki")
 
 func _on_Atakejo_body_exit( korpo ):

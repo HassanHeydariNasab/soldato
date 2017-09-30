@@ -5,9 +5,17 @@ onready var Kugloj = get_node("Kugloj")
 onready var Kamero = get_node("Kamero")
 onready var Kuglo_flanko = get_node("Kuglo_flanko")
 onready var Kuglo_flanko_tempilo = get_node("Kuglo_flanko_tempilo")
+onready var Montrilo = get_node("Kanvaso/Centro/Montrilo")
+onready var Finejo1 = get_node("Finejo1")
+var Finejo2 = null
+var L1 = null
+var L2 = null
 
 func _ready():
 	T.Radiko = self
+	if has_node("Finejo2"):
+		Finejo2 = get_node("Finejo2")
+	set_process(true)
 
 func _on_Dekstre_Supre_pressed():
 	Input.action_press("dekstre")
@@ -49,3 +57,14 @@ func _on_Resxargxi_pressed():
 
 func _on_Kuglo_flanko_tempilo_timeout():
 	Kuglo_flanko.hide()
+
+func _process(delta):
+	L1 = Finejo1.get_global_pos() - Soldato.get_global_pos()
+	if Finejo2 != null:
+		L2 = Finejo2.get_global_pos() - Soldato.get_global_pos()
+		if L1.length() < L2.length():
+			Montrilo.set_rot(atan2(L1.x,L1.y))
+		else:
+			Montrilo.set_rot(atan2(L2.x,L2.y))
+	else:
+		Montrilo.set_rot(atan2(L1.x,L1.y))
