@@ -3,6 +3,7 @@ extends KinematicBody2D
 onready var Aspekto = get_node("Aspekto")
 onready var Nav_tempilo = get_node("Nav_tempilo")
 onready var Vivo = get_node("Vivo")
+onready var Sango = get_node("Sango")
 
 const RAPIDO = 180
 var nav = null
@@ -11,8 +12,8 @@ var celo = Vector2()
 
 var animeto = false
 
-const VIVO = 7.0
-var vivo = 7.0
+const VIVO = 10.0
+var vivo = 10.0
 
 func _ready():
 	celo = get_node("/root/Radiko/Soldato").get_global_pos()
@@ -24,6 +25,7 @@ func rekalkuli_vojon():
 	vojo = nav.get_simple_path(get_pos(), celo, false)
 
 func _process(delta):
+	Sango.set_amount((VIVO - vivo)*5)
 	if vojo.size() > 1:
 		var d = get_pos().distance_to(vojo[0])
 		if d > 2:
@@ -49,6 +51,7 @@ func _on_Aspekto_finished():
 func _on_Videjo_body_enter( korpo ):
 	Nav_tempilo.start()
 	set_process(true)
+	Sango.set_emitting(true)
 
 func _on_Videjo_body_exit( korpo ):
 	Aspekto.set_animation("senkulpa")

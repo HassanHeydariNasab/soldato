@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Elementoj/Kuglujo.gd" type="Script" id=1]
-[ext_resource path="res://Elementoj/kuglujo.png" type="Texture" id=2]
+[ext_resource path="res://Elementoj/Sano.gd" type="Script" id=1]
+[ext_resource path="res://Elementoj/sano.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 80.6226
+extents = Vector2( 60, 60 )
 
-[node name="Kuglujo" type="Node2D"]
+[node name="Sano" type="Node2D"]
 
 script/script = ExtResource( 1 )
 

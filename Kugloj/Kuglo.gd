@@ -21,6 +21,7 @@ func _on_Areo_body_enter( korpo ):
 		elif T.get_layer_bit(korpo,2):
 			korpo.Nav_tempilo.start()
 			korpo.set_process(true)
+			korpo.Sango.set_emitting(true)
 		if korpo.vivo <= 0:
 			if T.get_layer_bit(korpo,1):
 				get_tree().reload_current_scene()

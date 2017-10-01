@@ -2,12 +2,16 @@ extends Node2D
 
 onready var Soldato = get_node("Soldato")
 onready var Kugloj = get_node("Kugloj")
+onready var Kuglujo = get_node("Kanvaso/Kuglujo")
+onready var Kuglujoj = get_node("Kanvaso/Kuglujoj")
 onready var Kamero = get_node("Kamero")
 onready var Kuglo_flanko = get_node("Kuglo_flanko")
 onready var Kuglo_flanko_tempilo = get_node("Kuglo_flanko_tempilo")
 onready var Montrilo = get_node("Kanvaso/Centro/Montrilo")
 onready var Finejo1 = get_node("Finejo1")
 var Finejo2 = null
+onready var Preni_sono = get_node("Preni_sono")
+
 var L1 = null
 var L2 = null
 
@@ -15,6 +19,8 @@ func _ready():
 	T.Radiko = self
 	if has_node("Finejo2"):
 		Finejo2 = get_node("Finejo2")
+	Kuglujo.set_value(Soldato.kugloj)
+	Kuglujoj.set_text(str(Soldato.kuglujoj))
 	set_process(true)
 
 func _on_Dekstre_Supre_pressed():

@@ -11,10 +11,12 @@ onready var Kuglujoj = get_node("/root/Radiko/Kanvaso/Kuglujoj")
 onready var Kamero = get_node("/root/Radiko/Kamero")
 onready var Kuglo_flanko = get_node("/root/Radiko/Kuglo_flanko")
 onready var Vivo = get_node("Vivo")
+onready var Sango = get_node("Sango")
+onready var Pasxo_sono = get_node("Pasxo_sono")
 
 var animeto = false
 
-var kuglujoj = 10
+var kuglujoj = 5
 var kugloj = 7
 
 var pafebla = true
@@ -33,15 +35,23 @@ func _ready():
 	set_process_input(true)
 
 func _process(delta):
+	if vivo == VIVO:
+		Sango.set_emitting(false)
+	else:
+		Sango.set_emitting(true)
+		Sango.set_amount((VIVO - vivo)*2)
 	if Input.is_action_pressed("supre") or Input.is_action_pressed("malsupre") or\
 	Input.is_action_pressed("dekstre") or Input.is_action_pressed("maldekstre"):
 		Kamero.set_offset(get_global_pos())
 		Kuglo_flanko.set_global_pos(get_global_pos())
 		if not animeto:
 			Aspekto.set_animation("movi")
+			if not Pasxo_sono.is_playing():
+				Pasxo_sono.play()
 	else:
 		if not animeto:
 			Aspekto.set_animation("senkulpa")
+			Pasxo_sono.stop()
 	if Input.is_action_pressed("supre"):
 		move(Vector2(0,-4))
 	if Input.is_action_pressed("malsupre"):

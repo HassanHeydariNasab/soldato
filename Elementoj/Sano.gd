@@ -13,8 +13,12 @@ func _ready():
 func _on_Areo_body_enter( korpo ):
 	get_node("Areo").clear_shapes()
 	T.Radiko.Preni_sono.play()
-	korpo.kuglujoj += 1
-	korpo.Kuglujoj.set_text(str(korpo.kuglujoj))
+	var viv = korpo.vivo + 10
+	if viv > korpo.VIVO:
+		korpo.vivo = korpo.VIVO
+	else:
+		korpo.vivo = viv
+	korpo.Vivo.set_scale(Vector2(korpo.vivo/korpo.VIVO,1))
 	Kasxi.start()
 
 func _on_Kasxi_tween_complete( object, key ):
