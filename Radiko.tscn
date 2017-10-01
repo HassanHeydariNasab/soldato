@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://Radiko.gd" type="Script" id=1]
 [ext_resource path="res://Tegolaroj/Plankoj.tres" type="TileSet" id=2]
@@ -12,8 +12,9 @@
 [ext_resource path="res://Butonoj/movilo.png" type="Texture" id=10]
 [ext_resource path="res://Butonoj/movo.png" type="Texture" id=11]
 [ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=12]
-[ext_resource path="res://Butonoj/rekomenci.png" type="Texture" id=13]
-[ext_resource path="res://Sonoj/138078__daboy291__picking-up-dvds.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Butonoj/resxargxi.png" type="Texture" id=13]
+[ext_resource path="res://Butonoj/resxargxi_premita.png" type="Texture" id=14]
+[ext_resource path="res://Sonoj/138078__daboy291__picking-up-dvds.ogg" type="AudioStream" id=15]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -245,7 +246,6 @@ autostart = false
 
 [node name="Kanvaso" type="CanvasLayer" parent="."]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -444,6 +444,10 @@ margin/right = -130.0
 margin/bottom = 1.0
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.8, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_constants/shadow_as_outline = 1
 text = "10"
 align = 1
 valign = 1
@@ -474,7 +478,6 @@ flat = false
 
 [node name="Resxargxejo" type="Control" parent="Kanvaso"]
 
-editor/display_folded = true
 anchor/left = 3
 anchor/top = 1
 anchor/right = 3
@@ -493,7 +496,7 @@ margin/bottom = 1160.0
 transform/pos = Vector2( 300, 990 )
 transform/scale = Vector2( 1.01563, 1.01563 )
 normal = ExtResource( 13 )
-pressed = ExtResource( 13 )
+pressed = ExtResource( 14 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -534,7 +537,7 @@ invert/border = 100.0
 
 [node name="Preni_sono" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 14 )
+stream/stream = ExtResource( 15 )
 stream/play = false
 stream/loop = false
 stream/volume_db = 10.0
