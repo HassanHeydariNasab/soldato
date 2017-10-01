@@ -44,14 +44,14 @@ func _process(delta):
 	Input.is_action_pressed("dekstre") or Input.is_action_pressed("maldekstre"):
 		Kamero.set_offset(get_global_pos())
 		Kuglo_flanko.set_global_pos(get_global_pos())
+		if not Pasxo_sono.is_playing():
+			Pasxo_sono.play()
 		if not animeto:
 			Aspekto.set_animation("movi")
-			if not Pasxo_sono.is_playing():
-				Pasxo_sono.play()
 	else:
+		Pasxo_sono.stop()
 		if not animeto:
 			Aspekto.set_animation("senkulpa")
-			Pasxo_sono.stop()
 	if Input.is_action_pressed("supre"):
 		move(Vector2(0,-4))
 	if Input.is_action_pressed("malsupre"):
