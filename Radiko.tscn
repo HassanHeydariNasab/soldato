@@ -1,20 +1,24 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://Radiko.gd" type="Script" id=1]
 [ext_resource path="res://Tegolaroj/Plankoj.tres" type="TileSet" id=2]
-[ext_resource path="res://Finejo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Elementoj/Kuglujo.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Elementoj/Sano.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Tegolaroj/Blokiloj.tres" type="TileSet" id=6]
-[ext_resource path="res://Soldato.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Malamikoj/Zombio.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Tegolaroj/Arboj.tres" type="TileSet" id=9]
-[ext_resource path="res://Butonoj/movilo.png" type="Texture" id=10]
-[ext_resource path="res://Butonoj/movo.png" type="Texture" id=11]
-[ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=12]
-[ext_resource path="res://Butonoj/resxargxi.png" type="Texture" id=13]
-[ext_resource path="res://Butonoj/resxargxi_premita.png" type="Texture" id=14]
-[ext_resource path="res://Sonoj/138078__daboy291__picking-up-dvds.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Malamikoj/Zombio/organoj1.png" type="Texture" id=3]
+[ext_resource path="res://Malamikoj/Zombio/organoj2.png" type="Texture" id=4]
+[ext_resource path="res://Malamikoj/Zombio/organoj3.png" type="Texture" id=5]
+[ext_resource path="res://Finejo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Elementoj/Kuglujo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elementoj/Sano.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Tegolaroj/Blokiloj.tres" type="TileSet" id=9]
+[ext_resource path="res://Soldato.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Malamikoj/Zombio.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Tegolaroj/Arboj.tres" type="TileSet" id=12]
+[ext_resource path="res://Butonoj/movilo.png" type="Texture" id=13]
+[ext_resource path="res://Butonoj/movo.png" type="Texture" id=14]
+[ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://Butonoj/resxargxi.png" type="Texture" id=16]
+[ext_resource path="res://Butonoj/resxargxi_premita.png" type="Texture" id=17]
+[ext_resource path="res://Sonoj/138078__daboy291__picking-up-dvds.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Muzikoj/Orbique_-_02_-_rain_in_McDonalds.ogg" type="AudioStream" id=19]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -94,7 +98,25 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Finejo1" parent="." instance=ExtResource( 3 )]
+[node name="Organoj1" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 320, -50 )
+texture = ExtResource( 3 )
+
+[node name="Organoj2" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 320, -50 )
+texture = ExtResource( 4 )
+
+[node name="Organoj3" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 320, -50 )
+texture = ExtResource( 5 )
+
+[node name="Finejo1" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( -4040, -2240 )
 transform/rot = 90.0
@@ -103,27 +125,27 @@ transform/rot = 90.0
 
 editor/display_folded = true
 
-[node name="Kuglujo" parent="Elementoj" instance=ExtResource( 4 )]
+[node name="Kuglujo" parent="Elementoj" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( -1550, -1750 )
 
-[node name="Kuglujo1" parent="Elementoj" instance=ExtResource( 4 )]
+[node name="Kuglujo1" parent="Elementoj" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 2220, -1810 )
 
-[node name="Kuglujo2" parent="Elementoj" instance=ExtResource( 4 )]
+[node name="Kuglujo2" parent="Elementoj" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1130, -430 )
 
-[node name="Sano1" parent="Elementoj" instance=ExtResource( 5 )]
+[node name="Sano1" parent="Elementoj" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 950, -2340 )
 
-[node name="Sano3" parent="Elementoj" instance=ExtResource( 5 )]
+[node name="Sano3" parent="Elementoj" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1610, -1320 )
 
-[node name="Sano4" parent="Elementoj" instance=ExtResource( 5 )]
+[node name="Sano4" parent="Elementoj" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( -2450, -860 )
 
@@ -132,7 +154,7 @@ transform/pos = Vector2( -2450, -860 )
 [node name="Blokiloj" type="TileMap" parent="."]
 
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 9 )
 cell/size = Vector2( 128, 128 )
 cell/quadrant_size = 8
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -150,7 +172,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Soldato" parent="." instance=ExtResource( 7 )]
+[node name="Soldato" parent="." instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 343.28, 1552.93 )
 transform/rot = -180.0
@@ -159,41 +181,41 @@ transform/rot = -180.0
 
 editor/display_folded = true
 
-[node name="Zombio" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 336.259, 215.55 )
 
-[node name="Zombio1" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio1" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2131.63, -525.828 )
 transform/rot = -37.3415
 
-[node name="Zombio7" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio7" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1230, -2290 )
 transform/rot = -2.44526
 
-[node name="Zombio2" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio2" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( -716.854, -450.389 )
 transform/rot = -196.613
 
-[node name="Zombio3" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio3" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( -1550, -1320 )
 transform/rot = -338.785
 
-[node name="Zombio4" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio4" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1630, -2260 )
 transform/rot = -256.53
 
-[node name="Zombio5" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio5" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( -540, -2250 )
 transform/rot = -256.53
 
-[node name="Zombio6" parent="Malamikoj" instance=ExtResource( 8 )]
+[node name="Zombio6" parent="Malamikoj" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( -2540, -2060 )
 transform/rot = -218.748
@@ -202,7 +224,7 @@ transform/rot = -218.748
 
 transform/scale = Vector2( 4, 4 )
 mode = 0
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 12 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 2
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -271,7 +293,6 @@ __meta__ = {
 
 [node name="Kontroliloj" type="Control" parent="Kanvaso"]
 
-editor/display_folded = true
 visibility/opacity = 0.4
 anchor/top = 1
 anchor/bottom = 1
@@ -288,13 +309,13 @@ margin/bottom = 577.0
 
 transform/pos = Vector2( 284, 467 )
 transform/scale = Vector2( 2.34375, 2.34375 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 
 [node name="Dekstre" type="TouchScreenButton" parent="Kanvaso/Kontroliloj"]
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 334, 417 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -308,7 +329,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 134, 417 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -322,7 +343,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 234, 317 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -336,7 +357,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 234, 517 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -350,7 +371,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 334, 317 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -364,7 +385,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 334, 517 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -378,7 +399,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 134, 317 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -392,7 +413,7 @@ visibility_mode = 0
 
 visibility/opacity = 0.0
 transform/pos = Vector2( 134, 517 )
-normal = ExtResource( 11 )
+normal = ExtResource( 14 )
 pressed = null
 bitmask = null
 shape = null
@@ -442,7 +463,7 @@ margin/left = 10.0
 margin/top = 80.0
 margin/right = -130.0
 margin/bottom = 1.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.8, 0, 1 )
 custom_constants/shadow_offset_x = 3
@@ -470,7 +491,7 @@ margin/left = 140.0
 margin/top = 300.0
 margin/right = 70.0
 margin/bottom = 0.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 15 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -495,8 +516,8 @@ margin/bottom = 1160.0
 
 transform/pos = Vector2( 300, 990 )
 transform/scale = Vector2( 1.01563, 1.01563 )
-normal = ExtResource( 13 )
-pressed = ExtResource( 14 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 17 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -537,11 +558,22 @@ invert/border = 100.0
 
 [node name="Preni_sono" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 15 )
+stream/stream = ExtResource( 18 )
 stream/play = false
 stream/loop = false
 stream/volume_db = 10.0
 stream/autoplay = false
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="Fonmuziko" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 19 )
+stream/play = false
+stream/loop = true
+stream/volume_db = -5.0
+stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500

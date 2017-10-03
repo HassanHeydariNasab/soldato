@@ -9,7 +9,7 @@ onready var Pafi_malplene_sono = get_node("Pafi_malplene_sono")
 onready var Kuglujo = get_node("/root/Radiko/Kanvaso/Kuglujo")
 onready var Kuglujoj = get_node("/root/Radiko/Kanvaso/Kuglujoj")
 onready var Kamero = get_node("/root/Radiko/Kamero")
-onready var Kuglo_flanko = get_node("/root/Radiko/Kuglo_flanko")
+#onready var Kuglo_flanko = get_node("/root/Radiko/Kuglo_flanko")
 onready var Vivo = get_node("Vivo")
 onready var Sango = get_node("Sango")
 onready var Pasxo_sono = get_node("Pasxo_sono")
@@ -43,7 +43,7 @@ func _process(delta):
 	if Input.is_action_pressed("supre") or Input.is_action_pressed("malsupre") or\
 	Input.is_action_pressed("dekstre") or Input.is_action_pressed("maldekstre"):
 		Kamero.set_offset(get_global_pos())
-		Kuglo_flanko.set_global_pos(get_global_pos())
+#		Kuglo_flanko.set_global_pos(get_global_pos())
 		if not Pasxo_sono.is_playing():
 			Pasxo_sono.play()
 		if not animeto:

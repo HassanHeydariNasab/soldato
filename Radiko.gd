@@ -11,6 +11,9 @@ onready var Montrilo = get_node("Kanvaso/Centro/Montrilo")
 onready var Finejo1 = get_node("Finejo1")
 var Finejo2 = null
 onready var Preni_sono = get_node("Preni_sono")
+onready var Organoj1 = get_node("Organoj1")
+onready var Organoj2 = get_node("Organoj2")
+onready var Organoj3 = get_node("Organoj3")
 
 var L1 = null
 var L2 = null
@@ -74,3 +77,15 @@ func _process(delta):
 			Montrilo.set_rot(atan2(L2.x,L2.y))
 	else:
 		Montrilo.set_rot(atan2(L1.x,L1.y))
+
+func _je_zombio_mortigxis(loko):
+	randomize()
+	if randi() % 2 == 0:
+		Organoj1.set_global_pos(loko)
+		Organoj1.show()
+	elif randi() % 3 == 0:
+		Organoj3.set_global_pos(loko)
+		Organoj3.show()
+	else:
+		Organoj2.set_global_pos(loko)
+		Organoj2.show()

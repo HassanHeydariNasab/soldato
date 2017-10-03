@@ -12,8 +12,8 @@ var celo = Vector2()
 
 var animeto = false
 
-const VIVO = 10.0
-var vivo = 10.0
+const VIVO = 5.0
+var vivo = 5.0
 
 func _ready():
 	celo = get_node("/root/Radiko/Soldato").get_global_pos()

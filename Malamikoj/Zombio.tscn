@@ -124,7 +124,7 @@ color/color = Color( 0.6875, 0.00537109, 0.00537109, 1 )
 transform/rot = -90.0
 frames = SubResource( 2 )
 animation = "senkulpa"
-frame = 10
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
